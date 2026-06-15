@@ -1,0 +1,25 @@
+{
+    "success": true,
+    "errors": {},
+    "vehicle": {
+        "id": 29,
+        "vin": "YV1CZ714661264975",
+        "modelyear": 2006,
+        "make": "V50 Volvo",
+        "model": "",
+        "license_plate": "LJUP443",
+        "name": "Volvo V50",
+        "state": "active",
+        "country": "SI",
+        "device_id": 1377700225704,
+        "trip_type_id": 2,
+        "company_id": 102,
+        "user_id": 432,
+        "owner_user_id": 432,
+        "odometer": 224518205,
+        "trip_no": 2033,
+        "engine_state": false,
+        "created_at": "2014-08-28T11:27:05.355+02:00",
+        "updated_at": "2015-11-13T11:18:06.646+01:00"
+    }
+}

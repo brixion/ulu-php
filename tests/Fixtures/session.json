@@ -1,0 +1,27 @@
+{
+    "success": true,
+    "errors": {},
+    "access_token": {
+        "access_token": "98cb262acd66651ad100bf9c6b04bad8"
+    },
+    "user": {
+        "id": 548,
+        "firstname": "Ziga",
+        "lastname": "Magajna",
+        "address": "Tehnoloski park",
+        "housenumber": "20",
+        "city": "Ljubljana",
+        "phone": "06-00000000",
+        "email": "g7424053@trbvm.com",
+        "created_at": "2014-08-30T08:10:45.793Z",
+        "updated_at": "2015-10-02T08:39:55.382Z",
+        "vat_number": "SI00000000",
+        "name": "Ziga Magajna",
+        "email_verified": true,
+        "picture": "/images/thumb/missing.png",
+        "timezone": "Europe/Amsterdam",
+        "sex": "m",
+        "birthday": "23.05.1990",
+        "terms_accepted_at": "2015-09-30T13:12:02.236Z"
+    }
+}

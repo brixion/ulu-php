@@ -1,0 +1,27 @@
+{
+    "success": true,
+    "errors": {},
+    "trip": {
+        "id": 242070,
+        "device_id": 9000000000050,
+        "vehicle_id": 1376,
+        "privacy": "commute",
+        "created_at": "2015-11-13T10:57:10.011+01:00",
+        "updated_at": "2015-11-13T13:16:59.876+01:00",
+        "duration": 275,
+        "max_speed": 16,
+        "distance": 589,
+        "idle_duration": 0,
+        "avg_speed": "7.71",
+        "start_road_name": "Van der Palmkade",
+        "start_road_place": "Amsterdam",
+        "start_road_country": "NL",
+        "stop_road_name": "Van der Palmkade",
+        "stop_road_place": "Amsterdam",
+        "stop_road_country": "NL",
+        "score": "0.88",
+        "trip_type_id": 3,
+        "acceleration_event_points": [],
+        "braking_event_points": []
+    }
+}

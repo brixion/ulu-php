@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "trips": [
+        {
+            "id": 242070,
+            "device_id": 9000000000050,
+            "vehicle_id": 1376,
+            "duration": 275,
+            "distance": 589,
+            "avg_speed": "7.71"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "success": true,
+    "errors": {},
+    "company": {
+        "id": 548,
+        "name": "test company",
+        "email": "test@company.com",
+        "created_at": "2015-07-21T11:54:20.852+02:00",
+        "updated_at": "2015-07-21T11:55:08.169+02:00",
+        "timezone": "Europe/Nederland",
+        "address": "test address",
+        "housenumber": "1a",
+        "city": "Sky city",
+        "region": "Left region",
+        "country": "NL",
+        "zip_code": "10280",
+        "vat_number": "11111111",
+        "registration_number": "34234321",
+        "phone": "12332123",
+        "contact_name": "Company contact",
+        "contact_phone": "3213444",
+        "contact_email": "company_contact@company.com",
+        "report_type_id": 1
+    }
+}
