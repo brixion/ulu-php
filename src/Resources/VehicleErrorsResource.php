@@ -13,7 +13,7 @@ final class VehicleErrorsResource extends AbstractResource
      */
     public function listForVehicle(int $vehicleId): array
     {
-        $response = $this->http->request('GET', 'vehicles/'.$vehicleId.'/vehicle_errors');
+        $response = $this->http->request('GET', 'vehicles/' . $vehicleId . '/vehicle_errors');
 
         /** @var list<mixed> $items */
         $items = is_array($response['vehicle_errors'] ?? null) ? $response['vehicle_errors'] : [];

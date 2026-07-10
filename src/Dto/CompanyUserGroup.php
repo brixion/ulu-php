@@ -15,8 +15,7 @@ final readonly class CompanyUserGroup
         public ?int $companyUserId,
         public ?int $companyGroupId,
         public ?bool $isAdmin,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

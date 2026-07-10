@@ -30,8 +30,7 @@ final readonly class Company
         public ?int $reportTypeId,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

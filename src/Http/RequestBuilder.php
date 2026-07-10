@@ -18,7 +18,7 @@ final class RequestBuilder
                 continue;
             }
 
-            $path = str_replace('{'.$key.'}', rawurlencode((string) $value), $path);
+            $path = str_replace('{' . $key . '}', rawurlencode((string) $value), $path);
         }
 
         return $path;

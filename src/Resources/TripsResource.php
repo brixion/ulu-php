@@ -16,7 +16,7 @@ final class TripsResource extends AbstractResource
      */
     public function listForVehicle(int $vehicleId, string $fromStartAt, string $toStartAt): array
     {
-        $response = $this->http->request('GET', 'vehicles/'.$vehicleId.'/trips', [
+        $response = $this->http->request('GET', 'vehicles/' . $vehicleId . '/trips', [
             'from_start_at' => $fromStartAt,
             'to_start_at' => $toStartAt,
         ]);
@@ -29,7 +29,7 @@ final class TripsResource extends AbstractResource
 
     public function get(int $tripId): Trip
     {
-        $response = $this->http->request('GET', 'trips/'.$tripId);
+        $response = $this->http->request('GET', 'trips/' . $tripId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['trip'] ?? null) ? $response['trip'] : [];
@@ -65,7 +65,7 @@ final class TripsResource extends AbstractResource
      */
     public function tripPoints(int $tripId, int $page = 1, ?int $limit = null): PaginatedList
     {
-        $response = $this->http->request('GET', 'trips/'.$tripId.'/trip_points', query: [
+        $response = $this->http->request('GET', 'trips/' . $tripId . '/trip_points', query: [
             'page' => $page,
             'limit' => $limit,
         ]);

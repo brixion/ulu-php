@@ -29,7 +29,7 @@ final class IbuttonsResource extends AbstractResource
      */
     public function update(int $ibuttonId, array $ibutton): Ibutton
     {
-        $response = $this->http->request('PUT', 'settings/ibuttons/'.$ibuttonId, [
+        $response = $this->http->request('PUT', 'settings/ibuttons/' . $ibuttonId, [
             'ibutton' => $ibutton,
         ]);
 
@@ -57,7 +57,7 @@ final class IbuttonsResource extends AbstractResource
 
     public function get(int $ibuttonId): Ibutton
     {
-        $response = $this->http->request('GET', 'settings/ibuttons/'.$ibuttonId);
+        $response = $this->http->request('GET', 'settings/ibuttons/' . $ibuttonId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['ibutton'] ?? null) ? $response['ibutton'] : [];
@@ -67,6 +67,6 @@ final class IbuttonsResource extends AbstractResource
 
     public function delete(int $ibuttonId): void
     {
-        $this->http->request('DELETE', 'settings/ibuttons/'.$ibuttonId);
+        $this->http->request('DELETE', 'settings/ibuttons/' . $ibuttonId);
     }
 }

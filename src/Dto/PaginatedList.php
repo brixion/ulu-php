@@ -17,8 +17,7 @@ final readonly class PaginatedList
         public ?int $totalPages = null,
         public ?int $currentPage = null,
         public ?bool $hasMore = null,
-    ) {
-    }
+    ) {}
 
     public function count(): int
     {

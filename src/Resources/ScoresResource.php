@@ -10,7 +10,7 @@ final class ScoresResource extends AbstractResource
 {
     public function getForVehicle(int $vehicleId, string $fromDate, string $toDate): VehicleScores
     {
-        $response = $this->http->request('GET', 'vehicles/'.$vehicleId.'/scores_for_period', [
+        $response = $this->http->request('GET', 'vehicles/' . $vehicleId . '/scores_for_period', [
             'from_date' => $fromDate,
             'to_date' => $toDate,
         ]);

@@ -44,8 +44,7 @@ final readonly class Hotspot
         public ?\DateTimeImmutable $deletedAt,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

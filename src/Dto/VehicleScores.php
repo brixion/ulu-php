@@ -13,8 +13,7 @@ final readonly class ScoreDetail
     public function __construct(
         public ?string $name,
         public ?float $score,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data
@@ -40,8 +39,7 @@ final readonly class VehicleScores
         public array $scores,
         public ?float $previousWeekScore,
         public ?string $tip,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

@@ -31,11 +31,11 @@ abstract class TestCase extends BaseTestCase
 
     protected function loadFixture(string $name): array
     {
-        $path = __DIR__.'/Fixtures/'.$name.'.json';
+        $path = __DIR__ . '/Fixtures/' . $name . '.json';
         $contents = file_get_contents($path);
 
         if ($contents === false) {
-            self::fail('Fixture not found: '.$name);
+            self::fail('Fixture not found: ' . $name);
         }
 
         /** @var array<string, mixed> $decoded */

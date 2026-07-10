@@ -32,8 +32,7 @@ final readonly class User
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
         public ?\DateTimeImmutable $termsAcceptedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

@@ -24,8 +24,7 @@ final readonly class VehicleError
         public ?string $vehicleErrorDescription,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

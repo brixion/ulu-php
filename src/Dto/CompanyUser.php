@@ -24,8 +24,7 @@ final readonly class CompanyUser
         public ?User $user,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

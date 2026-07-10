@@ -14,8 +14,7 @@ final readonly class VehicleCompanyGroup
         public ?int $id,
         public ?int $companyGroupId,
         public ?int $vehicleId,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

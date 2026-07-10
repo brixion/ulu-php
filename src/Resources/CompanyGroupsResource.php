@@ -29,7 +29,7 @@ final class CompanyGroupsResource extends AbstractResource
      */
     public function update(int $companyGroupId, array $companyGroup): CompanyGroup
     {
-        $response = $this->http->request('PUT', 'company_groups/'.$companyGroupId, [
+        $response = $this->http->request('PUT', 'company_groups/' . $companyGroupId, [
             'company_group' => $companyGroup,
         ]);
 
@@ -57,7 +57,7 @@ final class CompanyGroupsResource extends AbstractResource
 
     public function get(int $companyGroupId): CompanyGroup
     {
-        $response = $this->http->request('GET', 'company_groups/'.$companyGroupId);
+        $response = $this->http->request('GET', 'company_groups/' . $companyGroupId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['company_group'] ?? null) ? $response['company_group'] : [];
@@ -67,6 +67,6 @@ final class CompanyGroupsResource extends AbstractResource
 
     public function delete(int $companyGroupId): void
     {
-        $this->http->request('DELETE', 'company_groups/'.$companyGroupId);
+        $this->http->request('DELETE', 'company_groups/' . $companyGroupId);
     }
 }
