@@ -14,7 +14,7 @@ final class UserIbuttonsResource extends AbstractResource
      */
     public function create(int $ibuttonId, array $userIbutton): UserIbutton
     {
-        $response = $this->http->request('POST', 'settings/ibuttons/'.$ibuttonId.'/user_ibuttons', [
+        $response = $this->http->request('POST', 'settings/ibuttons/' . $ibuttonId . '/user_ibuttons', [
             'user_ibutton' => $userIbutton,
         ]);
 
@@ -29,7 +29,7 @@ final class UserIbuttonsResource extends AbstractResource
      */
     public function update(int $ibuttonId, int $userIbuttonId, array $userIbutton): UserIbutton
     {
-        $response = $this->http->request('PUT', 'settings/ibuttons/'.$ibuttonId.'/user_ibuttons/'.$userIbuttonId, [
+        $response = $this->http->request('PUT', 'settings/ibuttons/' . $ibuttonId . '/user_ibuttons/' . $userIbuttonId, [
             'user_ibutton' => $userIbutton,
         ]);
 
@@ -44,7 +44,7 @@ final class UserIbuttonsResource extends AbstractResource
      */
     public function list(int $ibuttonId, ?int $page = null, ?int $limit = null): PaginatedList
     {
-        $response = $this->http->request('GET', 'settings/ibuttons/'.$ibuttonId.'/user_ibuttons', query: [
+        $response = $this->http->request('GET', 'settings/ibuttons/' . $ibuttonId . '/user_ibuttons', query: [
             'page' => $page,
             'limit' => $limit,
         ]);
@@ -57,7 +57,7 @@ final class UserIbuttonsResource extends AbstractResource
 
     public function get(int $ibuttonId, int $userIbuttonId): UserIbutton
     {
-        $response = $this->http->request('GET', 'settings/ibuttons/'.$ibuttonId.'/user_ibuttons/'.$userIbuttonId);
+        $response = $this->http->request('GET', 'settings/ibuttons/' . $ibuttonId . '/user_ibuttons/' . $userIbuttonId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['user_ibutton'] ?? null) ? $response['user_ibutton'] : [];
@@ -67,6 +67,6 @@ final class UserIbuttonsResource extends AbstractResource
 
     public function delete(int $ibuttonId, int $userIbuttonId): void
     {
-        $this->http->request('DELETE', 'settings/ibuttons/'.$ibuttonId.'/user_ibuttons/'.$userIbuttonId);
+        $this->http->request('DELETE', 'settings/ibuttons/' . $ibuttonId . '/user_ibuttons/' . $userIbuttonId);
     }
 }

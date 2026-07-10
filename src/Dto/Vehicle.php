@@ -89,8 +89,7 @@ final readonly class Vehicle
         public ?\DateTimeImmutable $datetimeRegistration,
         public ?array $vehicleErrors,
         public ?array $companyGroups,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

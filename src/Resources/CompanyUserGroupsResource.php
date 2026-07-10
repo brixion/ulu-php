@@ -14,7 +14,7 @@ final class CompanyUserGroupsResource extends AbstractResource
      */
     public function create(int $companyGroupId, array $companyUserGroup): CompanyUserGroup
     {
-        $response = $this->http->request('POST', 'company_groups/'.$companyGroupId.'/company_user_groups', [
+        $response = $this->http->request('POST', 'company_groups/' . $companyGroupId . '/company_user_groups', [
             'company_group_id' => $companyGroupId,
             'company_user_group' => $companyUserGroup,
         ]);
@@ -30,7 +30,7 @@ final class CompanyUserGroupsResource extends AbstractResource
      */
     public function update(int $companyGroupId, int $companyUserGroupId, array $companyUserGroup): CompanyUserGroup
     {
-        $response = $this->http->request('PUT', 'company_groups/'.$companyGroupId.'/company_user_groups/'.$companyUserGroupId, [
+        $response = $this->http->request('PUT', 'company_groups/' . $companyGroupId . '/company_user_groups/' . $companyUserGroupId, [
             'company_group_id' => $companyGroupId,
             'id' => $companyUserGroupId,
             'company_user_group' => $companyUserGroup,
@@ -47,7 +47,7 @@ final class CompanyUserGroupsResource extends AbstractResource
      */
     public function list(int $companyGroupId, ?int $page = null, ?int $limit = null): PaginatedList
     {
-        $response = $this->http->request('GET', 'company_groups/'.$companyGroupId.'/company_user_groups', [
+        $response = $this->http->request('GET', 'company_groups/' . $companyGroupId . '/company_user_groups', [
             'company_group_id' => $companyGroupId,
         ], [
             'page' => $page,
@@ -62,7 +62,7 @@ final class CompanyUserGroupsResource extends AbstractResource
 
     public function get(int $companyGroupId, int $companyUserGroupId): CompanyUserGroup
     {
-        $response = $this->http->request('GET', 'company_groups/'.$companyGroupId.'/company_user_groups/'.$companyUserGroupId, [
+        $response = $this->http->request('GET', 'company_groups/' . $companyGroupId . '/company_user_groups/' . $companyUserGroupId, [
             'company_group_id' => $companyGroupId,
             'id' => $companyUserGroupId,
         ]);
@@ -75,7 +75,7 @@ final class CompanyUserGroupsResource extends AbstractResource
 
     public function delete(int $companyGroupId, int $companyUserGroupId): void
     {
-        $this->http->request('DELETE', 'company_groups/'.$companyGroupId.'/company_user_groups/'.$companyUserGroupId, [
+        $this->http->request('DELETE', 'company_groups/' . $companyGroupId . '/company_user_groups/' . $companyUserGroupId, [
             'company_group_id' => $companyGroupId,
             'id' => $companyUserGroupId,
         ]);

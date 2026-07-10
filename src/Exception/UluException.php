@@ -6,6 +6,4 @@ namespace Brixion\Ulu\Exception;
 
 use Exception;
 
-class UluException extends Exception
-{
-}
+class UluException extends Exception {}

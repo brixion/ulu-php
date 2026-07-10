@@ -36,8 +36,7 @@ final readonly class TripPoint
         public ?int $linkId,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $deviceCreatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

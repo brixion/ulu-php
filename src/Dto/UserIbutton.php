@@ -17,8 +17,7 @@ final readonly class UserIbutton
         public ?int $companyUserId,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

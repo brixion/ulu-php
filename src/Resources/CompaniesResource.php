@@ -22,7 +22,7 @@ final class CompaniesResource extends AbstractResource
 
     public function get(int $companyId): Company
     {
-        $response = $this->http->request('GET', 'companies/'.$companyId);
+        $response = $this->http->request('GET', 'companies/' . $companyId);
 
         /** @var array<string, mixed> $company */
         $company = is_array($response['company'] ?? null) ? $response['company'] : [];
@@ -63,7 +63,7 @@ final class CompaniesResource extends AbstractResource
         return [
             'company' => Company::listFromResponse($companies),
             'user' => array_map(
-                static fn (array $data): User => User::fromArray($data),
+                static fn(array $data): User => User::fromArray($data),
                 array_filter($users, 'is_array'),
             ),
             'token' => AccessToken::fromResponse($response),
@@ -76,7 +76,7 @@ final class CompaniesResource extends AbstractResource
      */
     public function update(int $companyId, array $company): array
     {
-        $response = $this->http->request('PUT', 'companies/'.$companyId, [
+        $response = $this->http->request('PUT', 'companies/' . $companyId, [
             'company' => $company,
         ]);
 
@@ -91,7 +91,7 @@ final class CompaniesResource extends AbstractResource
      */
     public function delete(int $companyId): array
     {
-        $response = $this->http->request('DELETE', 'companies/'.$companyId);
+        $response = $this->http->request('DELETE', 'companies/' . $companyId);
 
         /** @var list<mixed> $companies */
         $companies = is_array($response['company'] ?? null) ? $response['company'] : [];

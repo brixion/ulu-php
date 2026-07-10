@@ -27,7 +27,7 @@ final class VehiclesResource extends AbstractResource
 
     public function get(int $vehicleId): Vehicle
     {
-        $response = $this->http->request('GET', 'vehicles/'.$vehicleId);
+        $response = $this->http->request('GET', 'vehicles/' . $vehicleId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['vehicle'] ?? null) ? $response['vehicle'] : [];
@@ -57,7 +57,7 @@ final class VehiclesResource extends AbstractResource
      */
     public function update(int $vehicleId, array $vehicle): array
     {
-        $response = $this->http->request('PUT', 'vehicles/'.$vehicleId, [
+        $response = $this->http->request('PUT', 'vehicles/' . $vehicleId, [
             'vehicle' => $vehicle,
         ]);
 
@@ -69,7 +69,7 @@ final class VehiclesResource extends AbstractResource
 
     public function disconnect(int $vehicleId): Vehicle
     {
-        $response = $this->http->request('POST', 'vehicles/'.$vehicleId.'/disconnect');
+        $response = $this->http->request('POST', 'vehicles/' . $vehicleId . '/disconnect');
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['vehicle'] ?? null) ? $response['vehicle'] : [];
@@ -82,7 +82,7 @@ final class VehiclesResource extends AbstractResource
      */
     public function delete(int $vehicleId): array
     {
-        $response = $this->http->request('DELETE', 'vehicles/'.$vehicleId);
+        $response = $this->http->request('DELETE', 'vehicles/' . $vehicleId);
 
         /** @var list<mixed> $items */
         $items = is_array($response['vehicles'] ?? null) ? $response['vehicles'] : [];

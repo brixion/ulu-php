@@ -14,7 +14,7 @@ final class VehicleCompanyGroupsResource extends AbstractResource
      */
     public function create(int $companyGroupId, array $vehicleCompanyGroup): VehicleCompanyGroup
     {
-        $response = $this->http->request('POST', 'company_groups/'.$companyGroupId.'/vehicle_company_groups', [
+        $response = $this->http->request('POST', 'company_groups/' . $companyGroupId . '/vehicle_company_groups', [
             'company_group_id' => $companyGroupId,
             'vehicle_company_group' => $vehicleCompanyGroup,
         ]);
@@ -30,7 +30,7 @@ final class VehicleCompanyGroupsResource extends AbstractResource
      */
     public function list(int $companyGroupId, ?int $page = null, ?int $limit = null): PaginatedList
     {
-        $response = $this->http->request('GET', 'company_groups/'.$companyGroupId.'/vehicle_company_groups', query: [
+        $response = $this->http->request('GET', 'company_groups/' . $companyGroupId . '/vehicle_company_groups', query: [
             'page' => $page,
             'limit' => $limit,
         ]);
@@ -43,7 +43,7 @@ final class VehicleCompanyGroupsResource extends AbstractResource
 
     public function get(int $companyGroupId, int $vehicleCompanyGroupId): VehicleCompanyGroup
     {
-        $response = $this->http->request('GET', 'company_groups/'.$companyGroupId.'/vehicle_company_groups/'.$vehicleCompanyGroupId);
+        $response = $this->http->request('GET', 'company_groups/' . $companyGroupId . '/vehicle_company_groups/' . $vehicleCompanyGroupId);
 
         /** @var array<string, mixed> $data */
         $data = is_array($response['vehicle_company_group'] ?? null) ? $response['vehicle_company_group'] : [];
@@ -53,6 +53,6 @@ final class VehicleCompanyGroupsResource extends AbstractResource
 
     public function delete(int $companyGroupId, int $vehicleCompanyGroupId): void
     {
-        $this->http->request('DELETE', 'company_groups/'.$companyGroupId.'/vehicle_company_groups/'.$vehicleCompanyGroupId);
+        $this->http->request('DELETE', 'company_groups/' . $companyGroupId . '/vehicle_company_groups/' . $vehicleCompanyGroupId);
     }
 }

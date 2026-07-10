@@ -27,7 +27,7 @@ final class CompanyUsersResource extends AbstractResource
 
     public function get(int $companyUserId, ?int $page = null, ?int $limit = null): CompanyUser
     {
-        $response = $this->http->request('GET', 'company_users/'.$companyUserId, query: [
+        $response = $this->http->request('GET', 'company_users/' . $companyUserId, query: [
             'page' => $page,
             'limit' => $limit,
         ]);
@@ -64,6 +64,6 @@ final class CompanyUsersResource extends AbstractResource
 
     public function delete(int $companyUserId): void
     {
-        $this->http->request('DELETE', 'company_users/'.$companyUserId);
+        $this->http->request('DELETE', 'company_users/' . $companyUserId);
     }
 }

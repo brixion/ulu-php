@@ -14,8 +14,7 @@ final readonly class TripType
         public ?int $id,
         public ?string $key,
         public ?string $description,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

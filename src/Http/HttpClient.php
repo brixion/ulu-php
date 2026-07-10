@@ -20,8 +20,7 @@ final class HttpClient
     public function __construct(
         private readonly ClientInterface $client,
         private readonly string $baseUrl = self::DEFAULT_BASE_URL,
-    ) {
-    }
+    ) {}
 
     public static function create(?string $baseUrl = null): self
     {
@@ -67,13 +66,13 @@ final class HttpClient
         }
 
         if ($authenticated && $this->token !== null) {
-            $options['headers']['Authorization'] = 'Token token='.$this->token;
+            $options['headers']['Authorization'] = 'Token token=' . $this->token;
         }
 
         try {
-            $response = $this->client->request($method, rtrim($this->baseUrl, '/').'/'.ltrim($path, '/'), $options);
+            $response = $this->client->request($method, rtrim($this->baseUrl, '/') . '/' . ltrim($path, '/'), $options);
         } catch (GuzzleException $exception) {
-            throw new ApiException('HTTP request failed: '.$exception->getMessage(), 0, [], $exception);
+            throw new ApiException('HTTP request failed: ' . $exception->getMessage(), 0, [], $exception);
         }
 
         return $this->decodeResponse($response);
@@ -98,13 +97,13 @@ final class HttpClient
         ];
 
         if ($authenticated && $this->token !== null) {
-            $options['headers']['Authorization'] = 'Token token='.$this->token;
+            $options['headers']['Authorization'] = 'Token token=' . $this->token;
         }
 
         try {
             $response = $this->client->request($method, $url, $options);
         } catch (GuzzleException $exception) {
-            throw new ApiException('HTTP request failed: '.$exception->getMessage(), 0, [], $exception);
+            throw new ApiException('HTTP request failed: ' . $exception->getMessage(), 0, [], $exception);
         }
 
         return $this->decodeResponse($response);
@@ -156,7 +155,7 @@ final class HttpClient
         $errors = is_array($payload['errors'] ?? null) ? $payload['errors'] : [];
         $message = is_string($payload['message'] ?? null)
             ? $payload['message']
-            : 'ULU API request failed with HTTP '.$statusCode;
+            : 'ULU API request failed with HTTP ' . $statusCode;
 
         if ($statusCode === 401 || $statusCode === 403) {
             throw new AuthenticationException($message, $statusCode, $errors);

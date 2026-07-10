@@ -31,6 +31,7 @@
         "guzzlehttp/guzzle": "^7.9"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
         "phpstan/phpstan": "^2.0",
         "phpunit/phpunit": "^11.0"
     },
@@ -46,7 +47,9 @@
     },
     "scripts": {
         "test": "phpunit",
-        "analyse": "php -d memory_limit=512M vendor/bin/phpstan analyse --configuration=phpstan.neon"
+        "analyse": "php -d memory_limit=512M vendor/bin/phpstan analyse --configuration=phpstan.neon",
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix"
     },
     "minimum-stability": "stable",
     "prefer-stable": true

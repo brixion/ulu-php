@@ -4,6 +4,4 @@ declare(strict_types=1);
 
 namespace Brixion\Ulu\Exception;
 
-final class AuthenticationException extends ApiException
-{
-}
+final class AuthenticationException extends ApiException {}

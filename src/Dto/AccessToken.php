@@ -12,8 +12,7 @@ final readonly class AccessToken
 
     public function __construct(
         public string $accessToken,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

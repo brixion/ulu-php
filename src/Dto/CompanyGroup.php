@@ -15,8 +15,7 @@ final readonly class CompanyGroup
         public ?int $companyId,
         public ?string $name,
         public ?string $color,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

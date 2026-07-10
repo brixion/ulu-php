@@ -10,6 +10,5 @@ abstract class AbstractResource
 {
     public function __construct(
         protected readonly HttpClient $http,
-    ) {
-    }
+    ) {}
 }

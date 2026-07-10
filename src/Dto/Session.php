@@ -9,8 +9,7 @@ final readonly class Session
     public function __construct(
         public AccessToken $accessToken,
         public User $user,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $response

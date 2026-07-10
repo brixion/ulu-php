@@ -17,8 +17,7 @@ final readonly class Ibutton
         public ?int $companyId,
         public ?\DateTimeImmutable $createdAt,
         public ?\DateTimeImmutable $updatedAt,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data

@@ -63,8 +63,7 @@ final readonly class Trip
         public ?array $pointsVector,
         public ?array $accelerationEventPoints,
         public ?array $brakingEventPoints,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, mixed> $data
