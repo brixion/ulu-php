@@ -101,7 +101,10 @@ try {
 ```bash
 composer test
 composer analyse
+composer cs:check
 ```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contributor workflow.
 
 ## License
 
